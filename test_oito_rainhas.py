@@ -17,3 +17,8 @@ def test_checaVertizal():
     tabuleiro = ['01000000', '01000000', '00010000', '00000010',
                 '00100000', '00000001', '00000100','10000000']
     assert checaVertical(tabuleiro) == 0 #Ataque vertical
+
+def test_checaDiagonal():
+    tabuleiro = ['00001000', '00010000', '01000000', '00000010',
+                '00100000', '00000001', '00000100', '10000000']
+    assert checaDiagonal(tabuleiro) == 0 #Ataque diagonal
