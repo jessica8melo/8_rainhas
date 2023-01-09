@@ -1,4 +1,4 @@
-from oito_rainhas import valida_entrada, checaHorizontal
+from oito_rainhas import valida_entrada, checaHorizontal, checaVertical
 
 def test_valida_entrada(): 
     tabuleiro1 = ['00001000', '01000000', '00010000', '00000010',
