@@ -1,6 +1,16 @@
 """Implementação de verificação se tabuleiro
 contém a solução do problema das 8 rainhas
 """
+def checaHorizontal(tabuleiro):
+    for linha in tabuleiro:
+        rainhas_linha = 0
+        for caracter in linha:
+            if caracter == '1':
+                rainhas_linha += 1
+        if rainhas_linha > 1:
+            return 0
+    return 1
+
 def valida_entrada(tabuleiro):
     rainhas = 0
     for linha in tabuleiro: 
@@ -21,6 +31,10 @@ def main():
         tabuleiro.append(linha)
         n_linha -= 1
     if valida_entrada(tabuleiro) == -1:
-        return "Entrada inválida"
+        return "-1 (Entrada inválida)"
+    if checaHorizontal(tabuleiro) == 0:
+        return "0 (Não é solução)"
+    else:
+        return "Por enquanto, dando certo"
 
 print(main())

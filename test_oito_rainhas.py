@@ -10,5 +10,5 @@ def test_valida_entrada():
 
 def test_checaHorizontal():
     tabuleiro = ['00001001', '01000000', '00010000', '00000010',
-                '00100000', '00000001', '00000000']
-    assert checaHorizontal(tabuleiro) == -1
+                '00100000', '00000001', '00000100','00000000']
+    assert checaHorizontal(tabuleiro) == 0 #Ataque horizontal
